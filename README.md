@@ -7,7 +7,8 @@ Five notebooks are present in the `notebooks/` folder:
 * `2 - Data Augmentation` which used the same basic CNN with data augmentation ;
 * `3 - Bottleneck features` which uses the bottleneck features from a pre-trained VGG16 CNN ;
 * `4 - Fine-tuning` which fine-tunes the last convolutional block of a pre-trained VGG16 CNN ;
-* `5 - Adversarial examples` which generates adversarial examples and test the robustness of our models.
+* `5 - Adversarial examples with FGSM` which generates adversarial examples with FGSM (Fast Gradient Sign Method) ;
+* `6 - Cleverhans benchmark` which bencharmks our basic CNN model with `cleverhans` package using FGSM attack.
 
 The five notebooks were run on a `p2.xlarge` [AWS EC2](https://aws.amazon.com/ec2/) instance using the [Deep Learning AMI](https://aws.amazon.com/marketplace/pp/B06VSPXKDX).
 
@@ -17,6 +18,7 @@ First, make sure you have [Python 3](https://www.python.org/downloads/) installe
 - [tqdm](https://github.com/tqdm/tqdm)
 - [Tensorflow](https://www.tensorflow.org/install/)
 - [Keras](https://keras.io/#installation)
+- [cleverhans](https://github.com/tensorflow/cleverhans)
 
 The dataset comes from [here](http://landmark3d.codeplex.com).
 A Python script is provided to download all the images:
